@@ -15,6 +15,14 @@ public class MainView extends JFrame {
     private JTextField textFieldSearch;
     private JButton buttonSearch;
     private JLabel labelSearch;
+    private JPanel panelFindReplaceNorth;
+    private JLabel labelFind;
+    private JTextField inputFind;
+    private JLabel labelReplace;
+    private JTextField inputReplace;
+    private JPanel panelFindReplaceSouth;
+    private JButton buttonFindReplace;
+    private JTextArea textAreaFindReplace;
 
     public MainView() {
         setContentPane(panelMain);
@@ -32,6 +40,12 @@ public class MainView extends JFrame {
         return textAreaSearch.getText();
     }
 
+    public String getFindTerm() { return inputFind.getText(); }
+
+    public String getReplaceTerm() {return inputReplace.getText(); }
+
+    public String getFindReplaceText() { return textAreaFindReplace.getText(); }
+
     public void displayError(String error){
         JOptionPane.showMessageDialog(this, error);
     }
@@ -39,4 +53,6 @@ public class MainView extends JFrame {
     public void attachSearchListener(ActionListener listener){
         buttonSearch.addActionListener(listener);
     }
+
+    public void attachFindReplaceListener(ActionListener listener) {buttonFindReplace.addActionListener(listener);}
 }

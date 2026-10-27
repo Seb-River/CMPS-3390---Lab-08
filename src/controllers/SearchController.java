@@ -11,7 +11,7 @@ import java.net.http.HttpResponse;
 import java.nio.charset.StandardCharsets;
 
 public class SearchController {
-    private static final String SEARCH_URL = "https://cs.csub.edu/~paul/3390/lab08/search.php";
+    private static final String SEARCH_URL = "https://cs.csub.edu/~srivera/3390/lab08/search.php";
     private final HttpClient http = HttpClient.newHttpClient();
 
     public SearchController(MainView view) {

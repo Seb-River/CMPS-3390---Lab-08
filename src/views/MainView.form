@@ -76,14 +76,69 @@
               </scrollpane>
             </children>
           </grid>
-          <grid id="33055" binding="panelFindReplace" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
-            <margin top="0" left="0" bottom="0" right="0"/>
+          <grid id="33055" binding="panelFindReplace" layout-manager="BorderLayout" hgap="0" vgap="0">
             <constraints>
               <tabbedpane title="Find/Replace"/>
             </constraints>
             <properties/>
             <border type="none"/>
-            <children/>
+            <children>
+              <grid id="d4571" binding="panelFindReplaceNorth" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
+                <constraints border-constraint="North"/>
+                <properties/>
+                <border type="none"/>
+                <children>
+                  <component id="24920" class="javax.swing.JLabel" binding="labelFind">
+                    <constraints/>
+                    <properties>
+                      <text value="Find"/>
+                    </properties>
+                  </component>
+                  <component id="f8077" class="javax.swing.JTextField" binding="inputFind">
+                    <constraints/>
+                    <properties>
+                      <columns value="10"/>
+                    </properties>
+                  </component>
+                  <component id="733c3" class="javax.swing.JLabel" binding="labelReplace">
+                    <constraints/>
+                    <properties>
+                      <text value="Replace"/>
+                    </properties>
+                  </component>
+                  <component id="5e130" class="javax.swing.JTextField" binding="inputReplace">
+                    <constraints/>
+                    <properties>
+                      <columns value="10"/>
+                    </properties>
+                  </component>
+                </children>
+              </grid>
+              <grid id="6be9d" binding="panelFindReplaceSouth" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
+                <constraints border-constraint="South"/>
+                <properties/>
+                <border type="none"/>
+                <children>
+                  <component id="ff826" class="javax.swing.JButton" binding="buttonFindReplace">
+                    <constraints/>
+                    <properties>
+                      <text value="Find/Replace"/>
+                    </properties>
+                  </component>
+                </children>
+              </grid>
+              <scrollpane id="a60c">
+                <constraints border-constraint="Center"/>
+                <properties/>
+                <border type="line" title="Find/Replace Text"/>
+                <children>
+                  <component id="1e989" class="javax.swing.JTextArea" binding="textAreaFindReplace">
+                    <constraints/>
+                    <properties/>
+                  </component>
+                </children>
+              </scrollpane>
+            </children>
           </grid>
         </children>
       </tabbedpane>
